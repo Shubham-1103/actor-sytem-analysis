@@ -6,12 +6,14 @@ import akka.actor.typed.javadsl.AbstractBehavior;
 import akka.actor.typed.javadsl.ActorContext;
 import akka.actor.typed.javadsl.Behaviors;
 import akka.actor.typed.javadsl.Receive;
+import lombok.extern.slf4j.Slf4j;
 import src.commands.managerWorker.impl.BalanceResultCommand;
 import src.commands.managerWorker.impl.WorkerCommand;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 
+@Slf4j
 public class QueryLoyalityPoints extends AbstractBehavior<WorkerCommand> {
 
     private final Executor executor;
@@ -42,13 +44,13 @@ public class QueryLoyalityPoints extends AbstractBehavior<WorkerCommand> {
 
     private void extracted(WorkerCommand message) {
         CompletableFuture.supplyAsync(() -> {
-                    System.out.println("Query Loyalty Points worker is executing with thread id: " + Thread.currentThread().getName());
+                    log.info("Query Loyalty Points worker is executing with thread id: " + Thread.currentThread().getName());
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
-                    System.out.println("Sending the computed results form loyalty point balance worker to Manger Parent...!");
+                    log.info("Sending the computed results form loyalty point balance worker to Manger Parent...!");
                     message.getSender()
                             .tell(new BalanceResultCommand("loyaltyPointsService", "Balance:200",
                                     getContext().getSelf()));
@@ -58,7 +60,7 @@ public class QueryLoyalityPoints extends AbstractBehavior<WorkerCommand> {
                     e.printStackTrace();
                     return null;
                 })
-                .thenRun(() -> System.out.println("Last action of the Query loyalty points  worker!"));
+                .thenRun(() -> log.info("Last action of the Query loyalty points  worker!"));
 
     }
 }

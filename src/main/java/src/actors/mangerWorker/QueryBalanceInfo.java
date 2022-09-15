@@ -6,6 +6,7 @@ import akka.actor.typed.javadsl.AbstractBehavior;
 import akka.actor.typed.javadsl.ActorContext;
 import akka.actor.typed.javadsl.Behaviors;
 import akka.actor.typed.javadsl.Receive;
+import lombok.extern.slf4j.Slf4j;
 import src.commands.managerWorker.impl.BalanceResultCommand;
 import src.commands.managerWorker.impl.WorkerCommand;
 import src.service.QueryBalanceInfoService;
@@ -13,6 +14,7 @@ import src.service.QueryBalanceInfoService;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executor;
 
+@Slf4j
 public class QueryBalanceInfo extends AbstractBehavior<WorkerCommand> {
 
 
@@ -35,7 +37,7 @@ public class QueryBalanceInfo extends AbstractBehavior<WorkerCommand> {
     public Receive<WorkerCommand> createReceive() {
         return newReceiveBuilder()
                 .onAnyMessage(message -> {
-                    System.out.println("Query Wallet Service worker is executing with thread id: " + Thread.currentThread().getName());
+                    log.info("Query Wallet Service worker is executing with thread id: " + Thread.currentThread().getName());
                     if (message.getMessage().equals("QueryBalanceInfo")) {
                         triggerFutureBlockingOperation(message);
                     }
@@ -46,11 +48,11 @@ public class QueryBalanceInfo extends AbstractBehavior<WorkerCommand> {
 
     private void triggerFutureBlockingOperation(WorkerCommand message) {
         CompletableFuture.supplyAsync(() -> {
-                    System.out.println("Query Wallet Service worker async task is executing with thread id: " + Thread.currentThread().getName());
+                    log.info("Query Wallet Service worker async task is executing with thread id: " + Thread.currentThread().getName());
                     return queryBalanceInfoService.queryBalance();
                 },executor)
                 .thenAccept(result -> {
-                    System.out.println("result form Wallet Service ==== \n logged by QueryBalanceInfo Worker: " + result);
+                    log.info("result form Wallet Service ==== \n logged by QueryBalanceInfo Worker: " + result);
                     message.getSender()
                             .tell(new BalanceResultCommand("walletService", result, getContext().getSelf()));
                 })
@@ -58,7 +60,7 @@ public class QueryBalanceInfo extends AbstractBehavior<WorkerCommand> {
                     e.printStackTrace();
                     return null;
                 })
-                .thenRun(() -> System.out.println("Last action of the Query Balance info worker!"));
+                .thenRun(() -> log.info("Last action of the Query Balance info worker!"));
 
     }
 }

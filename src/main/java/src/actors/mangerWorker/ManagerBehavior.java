@@ -8,6 +8,7 @@ import akka.actor.typed.javadsl.AbstractBehavior;
 import akka.actor.typed.javadsl.ActorContext;
 import akka.actor.typed.javadsl.Behaviors;
 import akka.actor.typed.javadsl.Receive;
+import lombok.extern.slf4j.Slf4j;
 import src.commands.managerWorker.ManagerCommand;
 import src.commands.managerWorker.impl.BalanceResultCommand;
 import src.commands.managerWorker.impl.InstructionCommand;
@@ -19,6 +20,7 @@ import java.time.Duration;
 import java.util.concurrent.ConcurrentHashMap;
 
 
+@Slf4j
 public class ManagerBehavior extends AbstractBehavior<ManagerCommand> {
     private QueryBalanceInfoService queryBalanceInfoService; // service used by worker
 
@@ -48,17 +50,17 @@ public class ManagerBehavior extends AbstractBehavior<ManagerCommand> {
         return newReceiveBuilder()
 //                .onSignal(Terminated.class, handler -> Behaviors.same())
                 .onMessage(InstructionCommand.class, command -> {
-                    System.out.println("Manager worker is executing with thread id: " + Thread.currentThread().getName());
+                    log.info("Manager worker is executing with thread id: " + Thread.currentThread().getName());
                     this.responses = command.getResponses();
                     if (command.getMessage().equals("fetchBalances")) {
-                        System.out.println("Creating worker Actor for querying wallet balance");
+                        log.info("Creating worker Actor for querying wallet balance");
                         if (this.balanceWorker == null) {
                             this.balanceWorker = getContext().spawnAnonymous(QueryBalanceInfo.create(queryBalanceInfoService), DispatcherSelector.fromConfig("my-blocking-dispatcher-test"));
                         }
                         this.balanceWorker.tell(new WorkerCommand("QueryBalanceInfo", getContext().getSelf()));
 //                        askForData(balanceWorker, "QueryBalanceInfo");
 
-                        System.out.println("Creating worker Actor for querying loyality points balance");
+                        log.info("Creating worker Actor for querying loyality points balance");
                         if (this.loyalityPointWorker == null) {
                             this.loyalityPointWorker = getContext().spawnAnonymous(QueryLoyalityPoints.create());
                         }
@@ -69,9 +71,7 @@ public class ManagerBehavior extends AbstractBehavior<ManagerCommand> {
                 })
                 .onMessage(BalanceResultCommand.class, command -> {
                     responseFromDownStream.put(command.getServiceName(), command.getResult());
-                    System.out.printf("received %s responses from %s%n using %s worker",
-                            responseFromDownStream.size(),
-                            responseFromDownStream.keySet(), command.getWorker().path().name());
+                    log.info("received {} responses from {} using {} worker", responseFromDownStream.size(), responseFromDownStream.keySet(), command.getWorker().path().name());
                     System.out.println();
 
                     if (this.responseFromDownStream.size() == 2) {
@@ -85,7 +85,7 @@ public class ManagerBehavior extends AbstractBehavior<ManagerCommand> {
                     return Behaviors.same();
                 })
                 .onMessage(NoResponseFromWorkerCommand.class, message -> {
-                    System.out.println("Retrying with worker " + message.getWorker().path());
+                    log.info("Retrying with worker " + message.getWorker().path());
                     askForData(message.getWorker(), message.getCommand());
                     return Behaviors.same();
                 })
@@ -97,7 +97,7 @@ public class ManagerBehavior extends AbstractBehavior<ManagerCommand> {
                 .onSignal(Terminated.class, handler -> Behaviors.same())
                 .onMessage(BalanceResultCommand.class, command -> {
                     responseFromDownStream.put(command.getServiceName(), command.getResult());
-                    System.out.printf("received %s responses from %s%n",
+                   log.info("received {} responses from {}",
                             responseFromDownStream.size(),
                             responseFromDownStream.keySet());
                     if (responseFromDownStream.size() == 2) {
@@ -108,7 +108,7 @@ public class ManagerBehavior extends AbstractBehavior<ManagerCommand> {
                 })
                 // if the existing workers have not yet completed then we are queuing the next requests
                 .onMessage(InstructionCommand.class, message -> {
-                    System.out.println("Delaying the next requests...!");
+                    log.info("Delaying the next requests...!");
                     //getContext().getSelf().tell(message);
 //                    stashBuffer.stash(message);
                     return Behaviors.same();

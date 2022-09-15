@@ -4,58 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cb9e552-67e6-4f12-a24a-7b91890cc584" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/AkkaSpringApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/MainApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/Racer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/actors/blockChain/BlockChainManagerBehavior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/actors/blockChain/BlockChainWorkerBehavior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/ManagerBehavior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/QueryBalanceInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/QueryLoyalityPoints.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/WorkerBehavior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/actors/ownerRacer/RaceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/actors/ownerRacer/RacerBehavior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/annotation/AkkaActor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/blockChain/BlockChainManagerCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/blockChain/BlockChainWorkerCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/blockChain/impl/HashResultCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/blockChain/impl/MineBlockCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/managerWorker/ManagerCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/managerWorker/impl/BalanceResultCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/managerWorker/impl/InstructionCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/managerWorker/impl/NoResponseFromWorkerCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/managerWorker/impl/ResultCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/managerWorker/impl/WorkerCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/ownerRacer/RaceControllerCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/ownerRacer/RacerCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/ownerRacer/impl/owner/RacerFinishedCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/ownerRacer/impl/owner/RacerUpdateCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/ownerRacer/impl/owner/StartRace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/ownerRacer/impl/racer/PositionCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/ownerRacer/impl/racer/StartCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/config/AkkaActorConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/config/SpringActorProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/config/SpringExtension.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/config/SpringProps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/controller/RestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/models/Block.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/models/HashResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/models/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/service/QueryBalanceInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/service/TestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/utils/BlockChainUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/src/utils/BlocksData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.conf" afterDir="false" />
+    <list default="true" id="8cb9e552-67e6-4f12-a24a-7b91890cc584" name="Changes" comment="actor system">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/ManagerBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/ManagerBehavior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/QueryBalanceInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/QueryBalanceInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/QueryLoyalityPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/QueryLoyalityPoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/src/controller/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/controller/RestController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +119,14 @@
       <option name="presentableId" value="Default" />
       <updated>1658300787076</updated>
     </task>
+    <task id="LOCAL-00001" summary="actor system">
+      <created>1663232003941</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663232003941</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,6 +139,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="actor system" />
+    <option name="LAST_COMMIT_MESSAGE" value="actor system" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -227,7 +194,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/ManagerBehavior.java</url>
-          <line>57</line>
+          <line>59</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
