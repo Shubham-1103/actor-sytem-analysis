@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8cb9e552-67e6-4f12-a24a-7b91890cc584" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/AkkaSpringApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/MainApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/Racer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/actors/blockChain/BlockChainManagerBehavior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/actors/blockChain/BlockChainWorkerBehavior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/ManagerBehavior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/QueryBalanceInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/QueryLoyalityPoints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/WorkerBehavior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/actors/ownerRacer/RaceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/actors/ownerRacer/RacerBehavior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/annotation/AkkaActor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/blockChain/BlockChainManagerCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/blockChain/BlockChainWorkerCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/blockChain/impl/HashResultCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/blockChain/impl/MineBlockCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/managerWorker/ManagerCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/managerWorker/impl/BalanceResultCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/managerWorker/impl/InstructionCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/managerWorker/impl/NoResponseFromWorkerCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/managerWorker/impl/ResultCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/managerWorker/impl/WorkerCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/ownerRacer/RaceControllerCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/ownerRacer/RacerCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/ownerRacer/impl/owner/RacerFinishedCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/ownerRacer/impl/owner/RacerUpdateCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/ownerRacer/impl/owner/StartRace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/ownerRacer/impl/racer/PositionCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/commands/ownerRacer/impl/racer/StartCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/config/AkkaActorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/config/SpringActorProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/config/SpringExtension.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/config/SpringProps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/controller/RestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/models/Block.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/models/HashResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/models/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/service/QueryBalanceInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/service/TestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/utils/BlockChainUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/utils/BlocksData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.conf" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2CCJldompNjIN0oZJb2XteHCQl7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/shubhamsharma/IdeaProjects/akka-framework-analysis/src/main/java/models&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="commands.blockChain" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/models" />
+      <recent name="$PROJECT_DIR$/src/main/java/utils" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.AkkaSpringApp">
+    <configuration name="AkkaSpringApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.AkkaSpringApp" />
+      <module name="akka-framework-analysis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.controller.RestController" />
+      <module name="akka-framework-analysis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="src.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.Main" />
+      <module name="akka-framework-analysis" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="src.MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.MainApplication" />
+      <module name="akka-framework-analysis" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AkkaSpringApp" />
+        <item itemvalue="Application.RestController" />
+        <item itemvalue="Application.src.MainApplication" />
+        <item itemvalue="Application.src.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8cb9e552-67e6-4f12-a24a-7b91890cc584" name="Changes" comment="" />
+      <created>1658300787076</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658300787076</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/WorkerBehavior.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/src/MainApplication.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/src/MainApplication.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/src/config/SpringExtension.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/src/config/SpringActorProducer.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/src/config/AkkaActorConfig.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/src/config/SpringActorProducer.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/ManagerBehavior.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/ManagerBehavior.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/src/actors/mangerWorker/ManagerBehavior.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/src/commands/managerWorker/impl/InstructionCommand.java</url>
+          <line>9</line>
+          <properties field="serialVersionUID" class="src.commands.managerWorker.impl.InstructionCommand" />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/akka_framework_analysis$AkkaSpringApp.ic" NAME="AkkaSpringApp Coverage Results" MODIFIED="1658775572230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>src.*</FILTER>
+    </SUITE>
+  </component>
+</project>
